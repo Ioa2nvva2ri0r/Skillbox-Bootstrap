@@ -1,21 +1,35 @@
 {
-    "name": "Skillbox",
-    "short_name": "SBox",
-    "icons": [
-        {
-            "src": "img/favicon/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "img/favicon/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
-        }
-    ],
-    "theme_color": "#3f2aff",
-    "background_color": "#3f2aff",
-    "display": "standalone"
+  "name": "Skillbox",
+  "short_name": "SBox",
+  "icons": [
+    {
+      "src": "./android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "prefer_related_applications": true,
+  "theme_color": "#3f2aff",
+  "background_color": "#3f2aff",
+  "display": "standalone"
 }
