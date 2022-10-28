@@ -1,0 +1,60 @@
+@import "_mixin";
+@import "_variables";
+
+.footer {
+  min-height: 98px;
+  background-color: $col-bl-dr;
+  &__list {
+    @include throw-li();
+    @include flex-center-center();
+    min-height: 80px;
+    padding: 15px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__link {
+    width: 24px;
+    height: 24px;
+    & svg {
+      margin-top: 4px;
+    }
+    & svg > path {
+      transition: fill 0.4s ease-in-out;
+    }
+    &:focus svg path,
+    &:hover svg path,
+    &:active svg path {
+      fill: $col-bl;
+      transition: fill 0.4s ease-in-out;
+    }
+  }
+  &__copyright {
+    text-align: center;
+    padding-top: 4px;
+    font-size: 13px;
+    line-height: 15px;
+    color: $col-bl-dr;
+    &-box {
+      min-height: 18px;
+      background: $col-wi;
+    }
+  }
+  @media (max-width: 1023px) {
+    &__link {
+      & svg {
+        margin-top: 5px;
+      }
+    }
+    &__copyright {
+      padding-top: 3px;
+    }
+  }
+  @media (max-width: 767px) {
+    &__link {
+      & svg {
+        margin-top: 6px;
+      }
+    }
+  }
+}

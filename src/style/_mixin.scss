@@ -1,0 +1,79 @@
+@mixin throw {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin throw-li {
+  @include throw();
+  list-style: none;
+}
+
+@mixin throw-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin picture {
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+@mixin animation {
+  animation-duration: 0.4s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@mixin menu-open {
+  animation-name: menu-open;
+  @include animation();
+  @keyframes menu-open {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@mixin menu-close {
+  animation-name: menu-close;
+  @include animation();
+  @keyframes menu-close {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+}

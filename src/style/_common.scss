@@ -1,0 +1,112 @@
+@import "_mixin";
+@import "_variables";
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto-bold-webfont.woff2") format("woff2"),
+    url("../fonts/roboto-bold-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("../fonts/roboto-regular-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #666666;
+}
+
+button {
+  font-family: "Roboto";
+}
+
+button:focus,
+a:focus {
+  outline: none;
+}
+
+.animation {
+  &-menu {
+    &-open {
+      @include menu-open();
+    }
+    &-close {
+      @include menu-close();
+    }
+  }
+}
+
+.container {
+  max-width: 1137px;
+  @media (max-width: 1439px) {
+    max-width: 860px;
+  }
+  @media (max-width: 1023px) {
+    max-width: 717px;
+  }
+  @media (max-width: 767px) {
+    max-width: 540px;
+  }
+  @media (max-width: 575px) {
+    max-width: 320px;
+  }
+}
+
+.title-us-1 {
+  @include throw();
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 40px;
+  color: #212133;
+}
+
+.title-us-2 {
+  @include throw();
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 27px;
+  color: #212133;
+}
+
+.btn-us {
+  text-decoration: none;
+  padding: 20.5px 59px;
+  border-radius: 20px;
+  background-color: $col-bl;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: $col-wi;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: #6c5df8;
+    color: $col-wi;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  }
+  &:active {
+    text-decoration: none;
+    background-color: $col-bl-sh;
+    color: $col-wi;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  }
+}

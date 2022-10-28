@@ -1,0 +1,98 @@
+@import "_mixin";
+@import "_variables";
+
+.section-hero {
+  @include flex-center-center();
+  min-height: 620px;
+  padding: 35px 0;
+  background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+  &__content {
+    width: 100%;
+    max-width: 459px;
+    margin-inline-start: -2px;
+    color: $col-wi;
+  }
+  &__title {
+    @include throw();
+    min-height: 125px;
+    margin-bottom: 23px;
+    font-size: 60px;
+    line-height: 100%;
+  }
+  &__desc {
+    @include throw();
+    min-height: 66px;
+    margin-bottom: 64px;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  &__btn {
+    padding: 24px 75.5px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__img {
+    width: 630px;
+    height: 590px;
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @media (max-width: 1439px) {
+    &__img {
+      width: 373px;
+      height: 503px;
+    }
+  }
+  @media (max-width: 1023px) {
+    &__content {
+      max-width: 380px;
+    }
+    &__title {
+      min-height: 116px;
+      margin-block-start: -5px;
+      margin-bottom: 0;
+      font-size: 50px;
+    }
+    &__img {
+      width: 309px;
+      height: 342px;
+    }
+    &__desc {
+      width: 91%;
+    }
+  }
+  @media (max-width: 767px) {
+    min-height: 567px;
+    &__content {
+      margin-inline-start: 0;
+      padding-bottom: 54px;
+    }
+    &__img {
+      display: none;
+    }
+  }
+  @media (max-width: 575px) {
+    min-height: 353px;
+    &__content {
+      padding-top: 4px;
+      padding-bottom: 0;
+    }
+    &__title {
+      min-height: 64px;
+      font-size: 30px;
+    }
+    &__desc {
+      width: 100%;
+      margin-bottom: 44px;
+      font-size: 16px;
+      line-height: 135%;
+    }
+    &__btn {
+      padding: 20.5px 53.5px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
